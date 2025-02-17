@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    list-style: none;
+
+}
+body{
+    height: 100%;
+    width: 100%;
+    /* background-color: black;
+    color: white; */
+    overflow-x: hidden;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 1000px;
+  }
+  
+  .chart-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .chart-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .expense-chart {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .expense-chart .recharts-cartesian-axis line {
+    stroke: #adb5bd;
+  }
+  
+  .expense-chart .recharts-cartesian-grid line {
+    stroke: #ced4da;
+  }
+  
+  .recharts-tooltip {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recharts-tooltip-item {
+    font-size: 14px;
+    color: #495057;
+  }
+  
+  .recharts-bar {
+    border-radius: 5px;
+  }
+  
+  .form{
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    position: relative;
+    padding: 10px;
+  }
+  .submitBtn{
+    position: absolute;
+    top:6rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  input{
+    padding: 10px;
+    width: 100% ;
+    border-radius: 3px;
+  }
+  .submitBtn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #8884d8;
+    /* color: white; */
+    font-weight: 500;
+    font-size: 18px;
+    font-family: poppins;
+  }
+
+  .png-btn{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  .details{
+    background-color: #8884d8;
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    
+  }
+  #sideDetails{
+    width: 20px;
+    margin-top: 5px;
+  }
+  .overflow-hidden{
+    overflow-x: hidden;
+  }
+  .list-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #8884d8;
+    width: 350px;
+    height: 100%;
+    transform: translateX(-110%);
+    transition: 0.6s;
+    overflow-y: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: #4c3a82 #8884d8; 
+  }
+  
+  .list-details::-webkit-scrollbar {
+    width: 8px;
+   }
+  
+  .list-details::-webkit-scrollbar-track {
+    background-color: #8884d8; 
+    border-radius: 10px;
+  }
+  
+  .list-details::-webkit-scrollbar-thumb {
+    background-color: #4c3a82;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .list-details.active{
+    transform: translateX(0%);
+  }
+  .cancel{
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .li{
+    padding: 10px;
+    font-size: 17px;
+
+  }
+  .Amount-span{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .chartdelete{
+    margin-top: 1rem;
+  }
+  .transctions-h2 ,.ul{
+    padding: 10px;
+  }
+  .inner-ul{
+    border-bottom: 0.5px solid white;
+
+  }
+  .marge-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btnDelete{
+    padding: 5px 10px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  @media (max-width:850px) {
+    .chart-container {
+        padding: 18px;
+        margin: 0rem auto;
+        max-width: 900px;
+    }
+    .chart-title {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .list-details{
+      right: inherit;
+      left: 0;
+      transform: translateX(-100%);
+      width: 100%;
+
+    }
+    .png-btn {
+      right: 5px;
+      top: 5px;
+    }
+  .detailsBtn-span{
+    display: none;
+  }
+  .submitBtn {
+    font-size: 16px;
+  }
+  .form {
+    gap: 5px;
+}
+
+
+  }
+
+  @media (min-width:300px) and (max-width:550px) {
+    .submitBtn {
+      font-size: 13px;
+    }
+    .submitBtn {
+      position: inherit;
+      top: inherit;
+      left:inherit;
+      transform: inherit;
+    }
+    .form {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      padding: 10px;
+  }
+  }
